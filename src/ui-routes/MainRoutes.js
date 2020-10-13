@@ -11,7 +11,7 @@ const MainRoutes = () => {
   return (
     <div>
       <Route path="/user-home" component={UserHome} />
-      <Redirect to="/user-home" />
+      
     </div>
   )
 }

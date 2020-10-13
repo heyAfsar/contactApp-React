@@ -3,15 +3,15 @@ import { Route } from "react-router";
 import Loadable from "react-loadable";
 import Loading from "../ui-molecules/Loading";
 
-// const Dashboard = Loadable({
-//   loader: () => import("../ui-pages/UserHome/components/Content/Dashboard"),
-//   loading: Loading
-// });
+const ViewContact = Loadable({
+  loader: () => import("../ui-pages/UserHome/components/Content/components/ViewContact"),
+  loading: Loading
+});
 
 const UserRoutes = () => {
   return (
     <div>
-      {/* <Route exact path="/user-home" component={Dashboard} /> */}
+      <Route exact path="/user-home" component={ViewContact} /> 
     </div>
   )
 }
