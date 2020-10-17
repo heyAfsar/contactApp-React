@@ -51,12 +51,13 @@ class ViewContact extends React.Component {
         setAppData("dialog", false);
         setAppData("spinner", true)
         let apiResponse = await httpRequest({
-            endPoint: 'https://reqres.in/api/users?page=2',
+            endPoint: '/contacts',
+            instance:"instanceOne",
             method: "get",
         })
 
         setAppData("spinner", false)
-        setAppData("ContactList", apiResponse.data)
+        setAppData("ContactList", apiResponse)
 
     }
 
@@ -154,7 +155,8 @@ class ViewContact extends React.Component {
                                     <TableRow>
                                         <TableCell><Checkbox /></TableCell>
                                         <TableCell >Name</TableCell>
-                                        <TableCell>Last Name</TableCell>
+                                        <TableCell>Phone</TableCell>
+                                        <TableCell>Email</TableCell>
                                         <TableCell>Edit Action</TableCell>
                                         {/* <TableCell>Phone</TableCell> */}
                                         <TableCell>Delete Action</TableCell>
@@ -165,8 +167,9 @@ class ViewContact extends React.Component {
                                         return (
                                             <TableRow key={index}>
                                                 <TableCell><Checkbox /></TableCell>
-                                                <TableCell >{field.first_name}</TableCell>
-                                                <TableCell >{field.last_name}</TableCell>
+                                                <TableCell >{field.name}</TableCell>
+                                                <TableCell >{field.phone}</TableCell>
+                                                <TableCell >{field.email}</TableCell>
                                                 <TableCell className={classes.clickevent} hover='true'>
                                                     <Button className={classes.clickevent} variant="contained" color="primary" >
                                                         Edit

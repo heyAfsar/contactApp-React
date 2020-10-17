@@ -11,7 +11,9 @@ const ViewContact = Loadable({
 const UserRoutes = () => {
   return (
     <div>
-      <Route exact path="/user-home" component={ViewContact} /> 
+       <Route exact path="/" component={ViewContact} /> 
+      {/* <Route path="/user-home" component={ViewContact} />  */}
+     
     </div>
   )
 }

@@ -29,9 +29,9 @@ const styles = (theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "flex-end",
-    padding: "0 8px",
+    // padding: "0 8px",
     ...theme.mixins.toolbar,
-    minHeight: "55px"
+  //  minHeight: "100px"
   },
   content: {
     flexGrow: 1,

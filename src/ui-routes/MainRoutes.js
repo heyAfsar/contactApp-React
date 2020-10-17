@@ -10,7 +10,7 @@ const UserHome = Loadable({
 const MainRoutes = () => {
   return (
     <div>
-      <Route path="/user-home" component={UserHome} />
+      <Route path="/" component={UserHome} />
       
     </div>
   )
